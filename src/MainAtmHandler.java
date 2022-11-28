@@ -15,14 +15,16 @@ public class MainAtmHandler {
         System.out.println("Enter the Atm Pin");
         int atmSecurePin=sc.nextInt();
 
-        if ((atmNumber==atmCardNumber) && (atmPin==atmSecurePin)){
+        if ((atmNumber==atmCardNumber) && (atmPin==atmSecurePin)) {
             System.out.println("Validating sucessful");
+
             while(true){
                 System.out.println("1.View Available Balance");
                 System.out.println("2.Withdraw Amount");
                 System.out.println("3.Deposite Amount");
                 System.out.println("4.Mini Statement");
                 System.out.println("5.Exit");
+
 //                System.out.println("1.View Available Balance \n 2.Withdraw Amount \n 3.Deposite Amount \n 4.Mini Statement \n 5.Exit" );
 
                 System.out.println("Enter the Option");
@@ -44,6 +46,7 @@ public class MainAtmHandler {
 
                 } else if (SELECT==5) {
                     System.out.println("Collect Your Atm Card \n Thank you ! visit Again");
+                    System.exit(0);
                 }
                 else {
                     System.out.println("please Enter correct choice");
@@ -52,7 +55,7 @@ public class MainAtmHandler {
 
         }else {
             System.out.println("Incorrect atmnumber or pin..check onces");
-            System.exit();
+            System.exit(0);
         }
     }
 
